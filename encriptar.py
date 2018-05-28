@@ -1,4 +1,5 @@
-import os
+# import os
+from os import system
 
 LETRAS = {
     'a': 'w',
@@ -90,13 +91,14 @@ def cifrar_inicio():
     """)
         salir = input('    Ingresa la opción: ')
         if salir.lower() == 's':
+            system('clear')
             exit()
         elif salir.lower() == 'n':
-            os.system('clear')
+            system('clear')
             cifrar_inicio()
         else:
             print('Opción no valida. Saliendo.')
-            os.system('clear')
+            system('clear')
             otra_vez()
 
     def cifrar(true, letra):
@@ -155,7 +157,7 @@ def cifrar_inicio():
                 otra_vez()
 
 
-    os.system('clear')
+    system('clear')
     mensaje = """
     C I F R A D O R  D E  M E N S A J E S
     Qué es lo que te gustaría hacer?
@@ -178,6 +180,7 @@ def cifrar_inicio():
     elif letra.lower() == 'd':
         opcion_correcta = True
     elif letra.lower() == 's':
+        system('clear')
         exit()
     else:
         print('    Opción no valida.')
